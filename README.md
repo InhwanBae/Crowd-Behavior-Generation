@@ -13,6 +13,7 @@
   <a href="https://inhwanbae.github.io/publication/crowdes/"><strong><code>Project Page</code></strong></a>
   <a href="https://arxiv.org/abs/2504.04756"><strong><code>CVPR Paper</code></strong></a>
   <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation"><strong><code>Source Code</code></strong></a>
+  <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation/tree/main/3D%20Visualization%20Toolkit"><strong><code>3D Toolkit</code></strong></a>
   <a href="#-citation"><strong><code>Related Works</code></strong></a>
 </p>
 
@@ -67,9 +68,11 @@ pip install -r requirements.txt
 ```
 
 **Dataset**
-<br>Preprocessed [ETH](https://data.vision.ee.ethz.ch/cvl/aem/ewap_dataset_full.tgz), [UCY](https://graphics.cs.ucy.ac.cy/research/downloads/crowd-data), [SDD](http://vatic2.stanford.edu/stanford_campus_dataset.zip) and [EDIN](https://homepages.inf.ed.ac.uk/rbf/FORUMTRACKING/) datasets are [released](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases) in this repository.
+<br>Preprocessed [ETH](https://data.vision.ee.ethz.ch/cvl/aem/ewap_dataset_full.tgz), [UCY](https://graphics.cs.ucy.ac.cy/research/downloads/crowd-data), [SDD](http://vatic2.stanford.edu/stanford_campus_dataset.zip) and [EDIN](https://homepages.inf.ed.ac.uk/rbf/FORUMTRACKING/) datasets are [released](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases/tag/v1.0-dataset) in this repository.
 
-If you want to preprocess the datasets by yourself, please download the [raw datasets](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases) and run the following command:
+> [!NOTE]  
+> If you want to preprocess the datasets by yourself, please download the [raw datasets](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases/tag/v1.0-dataset) and run the following command:
+
 ```bash
 python utils/preprocess_dataset.py --model_config <path_to_model_config>
 
@@ -132,7 +135,9 @@ python trainval.py --export --model_config <path_to_model_config>
 python trainval.py --export --model_config ./configs/model/CrowdES_eth.yaml
 ```
 
-You can also customize the hyperparameters for exporting the generated trajectories by modifying the `CrowdES/evaluate_export_generated_traj.py` file. Here are the default settings:
+> [!TIP]
+> You can also customize the hyperparameters for exporting the generated trajectories by modifying the `CrowdES/evaluate_export_generated_traj.py` file. Here are the default settings:
+
 https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/97a7bc74748aeaaef8b25594005201a82c800559/CrowdES/evaluate_export_generated_traj.py#L11-L17
 
 ### Run CrowdES with Custom Input
@@ -144,7 +149,9 @@ python trainval.py --synthetic --model_config <path_to_model_config>
 python trainval.py --synthetic --model_config ./configs/model/CrowdES_eth.yaml
 ```
 
-You can also customize the hyperparameters by modifying the `CrowdES/evaluate_synthetic.py` file. Here are the default settings:
+> [!TIP]
+> You can also customize the hyperparameters by modifying the `CrowdES/evaluate_synthetic.py` file. Here are the default settings:
+
 https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/97a7bc74748aeaaef8b25594005201a82c800559/CrowdES/evaluate_synthetic_dataset.py#L9-L14
 
 <br>
@@ -155,7 +162,7 @@ https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/97a7bc74748aeaaef8b2
   <img src="img/crowdes-3d-visualization-animated.gif" width=90%>
 </div>
 
-To visualize the generated crowd behaviors in 3D, we provide a visualization toolkit based on the CARLA simulator. Please follow the instructions in the [3D_Visualization_Toolkit/README](https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/main/3D%20Visualization%20Toolkit/README.md) file to set up the environment and visualize the results.
+To visualize the generated crowd behaviors in 3D, we provide a visualization toolkit based on the CARLA simulator. Please follow the instructions in the [3D_Visualization_Toolkit/README](https://github.com/InhwanBae/Crowd-Behavior-Generation/tree/main/3D%20Visualization%20Toolkit) file to set up the environment and visualize the results.
 
 <br>
 

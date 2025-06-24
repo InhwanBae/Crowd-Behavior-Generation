@@ -13,6 +13,7 @@
   <a href="https://inhwanbae.github.io/publication/crowdes/"><strong><code>Project Page</code></strong></a>
   <a href="https://arxiv.org/abs/2504.04756"><strong><code>CVPR Paper</code></strong></a>
   <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation"><strong><code>Source Code</code></strong></a>
+  <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation/tree/main/3D%20Visualization%20Toolkit"><strong><code>3D Toolkit</code></strong></a>
   <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation?tab=readme-ov-file#-citation"><strong><code>Related Works</code></strong></a>
 </p>
 
@@ -31,7 +32,7 @@ This repository contains a 3D map extension and Python script that visualizes tr
 ### ⚙️ Installation
 1. Download and install [Carla 0.9.15](https://github.com/carla-simulator/carla/releases/tag/0.9.15/).
 
-2. Download and uncompress the CrowdES map extensions from our [release page](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases).
+2. Download and uncompress the [CrowdES map extensions](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases/download/v1.0-map/CrowdESMaps_0.9.15.tar.gz) from our [release page](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases).
 
 3. Put the map extensions in the CARLA root directory.
 
