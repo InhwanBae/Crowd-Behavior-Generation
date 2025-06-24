@@ -1,18 +1,41 @@
-## CrowdES trajectory 3D visualization
-This repository contains a Python script that visualizes trajectories generated from CrowdES.
+<h2 align="center">CrowdES 3D Visualization Toolkit for Trajectory & Motion </h2>
+<p align="center">
+  <a href="https://InhwanBae.github.io/"><strong>Inhwan Bae</strong></a>
+  ·  
+  <a href="https://leejunoh.com/"><strong>Junoh Lee</strong></a>
+  ·
+  <a href="https://sites.google.com/site/hgjeoncv/"><strong>Hae-Gon Jeon</strong></a>
+  <br>
+  CVPR 2025
+</p>
 
-### Requirements
+<p align="center">
+  <a href="https://inhwanbae.github.io/publication/crowdes/"><strong><code>Project Page</code></strong></a>
+  <a href="https://arxiv.org/abs/2504.04756"><strong><code>CVPR Paper</code></strong></a>
+  <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation"><strong><code>Source Code</code></strong></a>
+  <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation?tab=readme-ov-file#-citation"><strong><code>Related Works</code></strong></a>
+</p>
+
+<div align='center'>
+  <br><img src="https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/main/img/crowdes-3d-visualization-animated.gif" width=100%>
+  <br>Visualization on SDD-Hyang scene (top) and UCY-Zara scene (bottom)
+  <br><br>
+</div>
+
+This repository contains a 3D map extension and Python script that visualizes trajectories generated from CrowdES.
+
+### 💻 Requirements
 - Ubuntu system (tested on 18.04)
 - Carla 0.9.15
 
-### Installation
+### ⚙️ Installation
 1. Download and install [Carla 0.9.15](https://github.com/carla-simulator/carla/releases/tag/0.9.15/).
 
 2. Download and uncompress the CrowdES map extensions from our [release page](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases).
 
 3. Put the map extensions in the CARLA root directory.
 
-### Usage
+### 🌏 Usage
 1. Start Carla server:
    ```bash
    ./CarlaUE4.sh

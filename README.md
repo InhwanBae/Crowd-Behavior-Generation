@@ -150,6 +150,11 @@ https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/97a7bc74748aeaaef8b2
 <br>
 
 ## 🌏 3D Visualization
+
+<div align='center'>
+  <img src="img/crowdes-3d-visualization-animated.gif" width=90%>
+</div>
+
 To visualize the generated crowd behaviors in 3D, we provide a visualization toolkit based on the CARLA simulator. Please follow the instructions in the [3D_Visualization_Toolkit/README](https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/main/3D%20Visualization%20Toolkit/README.md) file to set up the environment and visualize the results.
 
 <br>
