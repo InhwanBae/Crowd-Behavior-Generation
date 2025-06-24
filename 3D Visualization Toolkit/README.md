@@ -2,23 +2,20 @@
 This repository contains a Python script that visualizes trajectories generated from CrowdES.
 
 ### Requirements
-- Ubuntu system
+- Ubuntu system (tested on 18.04)
 - Carla 0.9.15
 
 ### Installation
 1. Download and install [Carla 0.9.15](https://github.com/carla-simulator/carla/releases/tag/0.9.15/).
 
-2. Download and uncompress the CrowdES map extension from our [release page](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases).
+2. Download and uncompress the CrowdES map extensions from our [release page](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases).
 
+3. Put the map extensions in the CARLA root directory.
 
 ### Usage
-1. Start Carla server with the CrowdES map:
+1. Start Carla server:
    ```bash
-   ./CarlaUE4.sh -carla-map=[CrowdES_scene_name]
-
-   # Example
-   ./CarlaUE4.sh -carla-map=CrowdES_hyang
-   ./CarlaUE4.sh -carla-map=CrowdES_zara
+   ./CarlaUE4.sh
    ```
 
 2. Run our visualization script:

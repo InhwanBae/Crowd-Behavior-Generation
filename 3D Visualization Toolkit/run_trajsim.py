@@ -646,6 +646,13 @@ def main():
         
         client.load_world('CrowdES_zara')
         z_default=2.5
+        
+        # set camera
+        world = client.get_world()
+        transform = world.get_spectator().get_transform()
+        transform.location = carla.Location(x=315.328552, y=220.958313, z=7.827725)
+        transform.rotation = carla.Rotation(pitch=-51.071339, yaw=-90.952713, roll=0.000014)
+        world.get_spectator().set_transform(transform)
     else:
         raise NotImplementedError
     path = args.path
@@ -657,11 +664,6 @@ def main():
     
     csv_data = load_csv(path, origin=origin, frame_every=frame_every, multi=multi, 
                                 swap_xy=swap_xy, flip_x=flip_x, flip_y=flip_y)
-    
-    if False:
-        # This is for the appearance control
-        csv_data = load_csv(path, origin=np.array([[120.2, 223.3]]), frame_every=frame_every, multi=multi, 
-                                swap_xy=False, flip_x=False, flip_y=False)
     
     def get_actor_from_data(csv_data):
         frame_dat = sorted(list(csv_data.keys()))
