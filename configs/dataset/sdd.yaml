@@ -2,7 +2,7 @@ dataset_name: sdd
 dataset_family: sdd
 dataset_path: ./datasets/SDD/
 dataset_preprocessor: SDDPreprocessor
-dataset_preprocessed_path: /data/Crowd_Generation/datasets/preprocessed/sdd/
+dataset_preprocessed_path: ./datasets/preprocessed/sdd/
 dataset_augmentation: ['hflip', 'vflip', 'tp', 'rev']
 dataset_fps: 30
 dataset_test:

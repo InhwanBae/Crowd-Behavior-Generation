@@ -2,7 +2,7 @@ dataset_name: univ
 dataset_family: ethucy
 dataset_path: ./datasets/ETH-UCY/
 dataset_preprocessor: ETHUCYPreprocessor
-dataset_preprocessed_path: /data/Crowd_Generation/datasets/preprocessed/univ/
+dataset_preprocessed_path: ./datasets/preprocessed/univ/
 dataset_augmentation: ['hflip', 'vflip', 'tp', 'rev']
 dataset_fps: 25
 dataset_test:

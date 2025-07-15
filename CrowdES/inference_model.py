@@ -68,7 +68,7 @@ class CrowdESFramework:
         self.traj_fut_frame = self.config.crowd_simulator.simulator.future_length
 
         # Prepare ORCA simulator if specified
-        if self.config.simulation.type == 'ORCA':
+        if self.config.crowd_simulator.type == 'ORCA':
             navmesh_vertices = [[x, 0, y] for x, y in image2world(np.array(self.navmesh['vertices'])[..., [0, 1]], self.H)]  # (w, h) -> (x, y) -> (x, 0, y)
             navmesh_polygons = self.navmesh['polygons']
             self.pf = PathFinderNew(navmesh_vertices, navmesh_polygons)
@@ -656,21 +656,21 @@ class CrowdESFramework:
 
             # Emitter phase
             pbar.set_description('Crowd Emitter  ')
-            if self.config.emission.type == 'CrowdES':
+            if self.config.crowd_emitter.type == 'CrowdES':
                 self.process_emitter()
-            if self.config.emission.type == 'surface':
+            elif self.config.crowd_emitter.type == 'surface':
                 self.process_surface_emitter()
             else:
-                raise NotImplementedError(f'Emitter type {self.config.emission.type} is not implemented.')
+                raise NotImplementedError(f'Emitter type {self.config.crowd_emitter.type} is not implemented.')
 
             # Simulator phase
             pbar.set_description('Crowd Simulator')
-            if self.config.simulation.type == 'CrowdES':
+            if self.config.crowd_simulator.type == 'CrowdES':
                 self.process_simulator()
-            elif self.config.simulation.type == 'ORCA':
+            elif self.config.crowd_simulator.type == 'ORCA':
                 self.process_orca_simulator()
             else:
-                raise NotImplementedError(f'Simulator type {self.config.simulation.type} is not implemented.')
+                raise NotImplementedError(f'Simulator type {self.config.crowd_simulator.type} is not implemented.')
 
             pbar.set_postfix(population=len(self.agent_ids_in_current_scene), added=self.statistics_added, dropped=self.statistics_dropped)
             pbar.update()

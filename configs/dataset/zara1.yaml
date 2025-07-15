@@ -2,7 +2,7 @@ dataset_name: zara1
 dataset_family: ethucy
 dataset_path: ./datasets/ETH-UCY/
 dataset_preprocessor: ETHUCYPreprocessor
-dataset_preprocessed_path: /data/Crowd_Generation/datasets/preprocessed/zara1/
+dataset_preprocessed_path: ./datasets/preprocessed/zara1/
 dataset_augmentation: ['hflip', 'vflip', 'tp', 'rev']
 dataset_fps: 25
 dataset_test:

@@ -2,7 +2,7 @@ dataset_name: edin
 dataset_family: edinburgh
 dataset_path: ./datasets/EDIN/
 dataset_preprocessor: EDINPreprocessor
-dataset_preprocessed_path: /data/Crowd_Generation/datasets/preprocessed/edin/
+dataset_preprocessed_path: ./datasets/preprocessed/edin/
 dataset_augmentation: ["rev"]
 dataset_fps: 10
 dataset_test:
