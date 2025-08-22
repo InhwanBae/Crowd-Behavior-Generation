@@ -6,6 +6,8 @@ opencv-python
 pandas
 pillow
 POT
+pykalman
+pynavmesh
 PyYAML
 scikit-image
 scikit-learn
