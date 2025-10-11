@@ -1,13 +1,3 @@
-#!/usr/bin/env python
-
-# Copyright (c) 2021 Computer Vision Center (CVC) at the Universitat Autonoma de
-# Barcelona (UAB).
-#
-# This work is licensed under the terms of the MIT license.
-# For a copy, see <https://opensource.org/licenses/MIT>.
-
-"""Example script to generate traffic in the simulation"""
-
 import glob
 import os
 import sys
@@ -37,7 +27,8 @@ import pdb
 import math
 
 # con, top
-tk = 0.4
+# tk = 0.4  # for 4K monitor
+tk = 0.2  # for FHD monitor
 # behav
 # tk = 0.2
 # large
@@ -49,11 +40,21 @@ tk = 0.4
 # tk = 3.0
 z_default = 1.5
 
-color_min_max = ((150, 200), (0, 50), (0, 20))
-walker_color_code = [(234, 56,41 ), (246, 133, 17), (248, 217, 4), (170, 216, 22), (39, 187, 54), (0, 143, 93), (15, 181, 174), (51, 197, 232), (56, 146, 243), (104, 109, 244), (137, 61, 231), (224, 85, 226), (222, 61, 130)]
-#walker_color_code = [(234, 56,41 )]
-vehicle_color_code = [(234, 56,41 ), (246, 133, 17), (248, 217, 4), (170, 216, 22), (39, 187, 54), (0, 143, 93), (15, 181, 174), (51, 197, 232), (56, 146, 243), (104, 109, 244), (137, 61, 231), (224, 85, 226), (222, 61, 130)]
-#vehicle_color_code = [(56, 146, 243)]
+
+### Realistic & natural color codes for `showflag.Emissive 0` in carla debug mode
+# walker_color_code = [(234, 56, 41), (246, 133, 17), (248, 217, 4), (170, 216, 22), (39, 187, 54), (0, 143, 93), (15, 181, 174), (51, 197, 232), (56, 146, 243), (104, 109, 244), (137, 61, 231), (224, 85, 226), (222, 61, 130)]
+# vehicle_color_code = [(234, 56, 41), (246, 133, 17), (248, 217, 4), (170, 216, 22), (39, 187, 54), (0, 143, 93), (15, 181, 174), (51, 197, 232), (56, 146, 243), (104, 109, 244), (137, 61, 231), (224, 85, 226), (222, 61, 130)]
+# walker_color_code = [(234, 56, 41)]
+# vehicle_color_code = [(56, 146, 243)]
+
+### Color codes for CARLA_Shipping
+# Random color for visualizing agent ids
+walker_color_code = [(1, 0, 0), (4, 0, 0), (0, 1, 0), (0, 4, 0), (0, 0, 1), (0, 0, 4), (1, 1, 0), (1, 0, 1), (0, 1, 1)]
+vehicle_color_code = [(1, 0, 0), (4, 0, 0), (0, 1, 0), (0, 4, 0), (0, 0, 1), (0, 0, 4), (1, 1, 0), (1, 0, 1), (0, 1, 1)]
+# Fixed color for visualizing agent types
+# walker_color_code = [(1, 0, 0)]
+# vehicle_color_code = [(0, 0, 1)]
+
 
 def get_actor_blueprints(world, filter, generation):
     bps = world.get_blueprint_library().filter(filter)
