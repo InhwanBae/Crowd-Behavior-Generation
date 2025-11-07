@@ -104,3 +104,16 @@ Then, put the map extensions in the CARLA root directory.
    # Example
    python export_csv.py --path ./configs/model/CrowdES_zara01.yaml --export
    ```
+
+<br>
+
+### 🗺️ Adding Custom Scenes/Maps
+
+<div align='center'>
+  <br><img src="https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/main/img/crowdes-3d-visualization-ue4mapeditor.png" width=50%>
+  <br>Building a custom 3D map in the Unreal Engine Editor
+  <br><br>
+</div>
+
+If you want to add a new scene or use a custom map for visualization, please refer to the following GitHub issue for guidance:
+https://github.com/InhwanBae/Crowd-Behavior-Generation/issues/6#issuecomment-3218095853
