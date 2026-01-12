@@ -1,6 +1,6 @@
 dataset_name: eth
 dataset_family: ethucy
-dataset_path: ./datasets/ETH-UCY/
+dataset_path: ./datasets
 dataset_preprocessor: ETHUCYPreprocessor
 dataset_preprocessed_path: ./datasets/preprocessed/eth/
 dataset_augmentation: ['hflip', 'vflip', 'tp', 'rev']
