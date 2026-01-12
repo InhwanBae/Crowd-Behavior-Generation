@@ -3,7 +3,7 @@ from utils.config import get_config, print_arguments
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_config', type=int, default='./configs/model/CrowdES_gcs.yaml', help='Path to a model config file')
+    parser.add_argument('--model_config', type=str, default='./configs/model/CrowdES_gcs.yaml', help='Path to a model config file')
     parser.add_argument('--dataset_config', type=str, default=None, help='Path to a trainer config file (optional). If not provided, the default config will be used.')
     parser.add_argument('--trainer_config', type=str, default=None, help='Path to a trainer config file (optional). If not provided, the default config will be used.')
     parser.add_argument('--model_train', type=str, default='emitter', help='Stage of the experiment', choices=['emitter_pre', 'emitter', 'simulator'])
@@ -13,7 +13,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     config = get_config(args.model_config, args.dataset_config, args.trainer_config)
-    
     # Print the arguments and configs
     print('===== Arguments =====')
     print_arguments(vars(args))

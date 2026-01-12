@@ -32,7 +32,7 @@ crowd_emitter:
 
 crowd_simulator:
   simulator:
-    checkpoint_dir: "./checkpoints/{}/dynamics/"
+    checkpoint_dir: "./checkpoints/{}/simulator/"
     train_batch_size: 2048
     eval_batch_size: 2048
     gradient_accumulation_steps: 1
