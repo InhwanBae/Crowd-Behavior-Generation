@@ -15,7 +15,7 @@ crowd_emitter:
     max_population: 128
     population_density_temperature: 0.5
     population_probability_threshold: 0.01
-    population_multiplier: 0.25
+    population_multiplier: 1
     image_size: [1024, 1024]
 
   emitter:
